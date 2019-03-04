@@ -1,0 +1,24 @@
+import random
+option='y'
+while True:
+        print("Top face when dice is rolled: {}".format(random.randint(1,6)))
+        option=input("Roll dice again? (y/n)")
+        if option== 'n':
+                break
+
+
+'''
+Output:
+Top face when dice is rolled: 1
+Roll dice again? (y/n)y
+Top face when dice is rolled: 4
+Roll dice again? (y/n)y
+Top face when dice is rolled: 3
+Roll dice again? (y/n)y
+Top face when dice is rolled: 5
+Roll dice again? (y/n)
+Top face when dice is rolled: 5
+Roll dice again? (y/n)y
+Top face when dice is rolled: 5
+Roll dice again? (y/n)n
+'''

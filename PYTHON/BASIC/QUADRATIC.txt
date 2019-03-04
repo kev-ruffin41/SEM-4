@@ -1,0 +1,24 @@
+import math
+a,b,c=input('ENTER COEFFICIANTS OF THE QUADRATIC EQUATION:').split()
+a=int(a)
+b=int(b)
+c=int(c)
+r=(b**2)-(4*a*c)
+if r>0:
+    x=(-b+math.pow(r,0.5))/(2*a)
+    y=(-b-math.pow(r,0.5))/(2*a)
+    print('SOLUTION OF QUADRATIC EQUATION ',x,' and ',y)
+elif r==0:
+    x=(-b)/(2*a)
+    print('The solution to the quadratic equation ',x)
+else:
+    print('imaginary solutions')
+
+'''
+OUTPUT:
+ENTER COEFFICIANTS OF THE QUADRATIC EQUATION::1 -4 4
+SOLUTION OF QUADRATIC EQUATION  2.0
+
+ENTER COEFFICIANTS OF THE QUADRATIC EQUATION:1 -3 2
+SOLUTION OF QUADRATIC EQUATION  2.0  and  1.0
+'''

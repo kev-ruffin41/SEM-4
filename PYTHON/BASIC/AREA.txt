@@ -1,0 +1,34 @@
+side=input("ENTER SIDE OF THE SQUARE -")
+print "AREA OF SQUARE = ",side*side
+
+radius=input("ENTER RADIUS OF CIRCLE -") 
+print"AREA OF CIRCLE = ",3.142*radius*radius
+
+length=input("ENTER LENGTH OF RECTANGLE - 4")
+breadth=input("ENTER BREADTH OF RECTANGLE - 8 ")
+print"AREA OF RECTANGLE = ",length*breadth
+
+sidea=input("ENTER LENGTH OF TRIANGLE SIDE A")
+sideb=input("ENTER LENGTH OF TRIANGLE SIDE B")
+sidec=input("ENTER LENGTH OF TRIANGLE SIDE C")
+per=(sidea+sideb+sidec)/2
+area=float((per*(per-sidea)*(per-sideb)*(per-sidec))**.5)
+print"AREA OF TRIANGLE =",area
+
+'''
+OUTPUT
+ENTER SIDE OF THE SQUARE - 5
+AREA OF SQUARE = 25
+
+ENTER RADIUS OF CIRCLE - 7
+AREA OF CIRCLE = 154
+
+ENTER LENGTH OF RECTANGLE - 4
+ENTER BREADTH OF RECTANGLE - 8
+AREA OF RECTANGLE = 32
+
+ENTER LENGTH OF TRIANGLE SIDE A 5
+ENTER LENGTH OF TRIANGLE SIDE B 6
+ENTER LENGTH OF TRIANGLE SIDE C 7
+AREA OF TRIANGLE = 128
+'''
