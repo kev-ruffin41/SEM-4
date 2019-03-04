@@ -1,0 +1,18 @@
+def fact(n):
+    if n==1:
+            return 1
+    else:
+        return int(n*fact(n-1))
+while True:
+    num=int(input('ENTER NUMBER TO FIND FACTORIAL : '))
+    print(fact(num))
+    
+
+'''
+OUTPUT:
+ENTER NUMBER TO FIND FACTORIAL : 4
+24
+
+ENTER NUMBER TO FIND FACTORIAL : 6
+720
+'''

@@ -1,0 +1,20 @@
+def fact(x):
+	if x==0:
+		return 1
+	else:
+		return x*fact(x-1)
+
+i=1		
+while i==1:
+	x=input("ENTER NUMBER TO FIND FACTORIAL-")
+	print fact(x)
+	
+'''
+OUTPUT:
+ENTER NUMBER TO FIND FACTORIAL - 9
+362880
+
+ENTER NUMBER TO FIND FACTORIAL - 3
+6
+
+'''	

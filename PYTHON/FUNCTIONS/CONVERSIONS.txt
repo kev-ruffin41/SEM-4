@@ -1,0 +1,148 @@
+import math
+def con(x):
+    a=[]
+    b=[]
+    k=i=j=s=s1=0
+    stype=int(input("CONVERT FROM : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY "))
+    etype=int(input("CONVERT TO : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY "))
+
+    if stype==etype:
+        print('THE SAME NUMBER IS FOUND : ',x)
+        exit()
+    elif stype==2 :
+        s=16
+    elif stype==3 :
+	    s=8
+    elif stype==4 :
+    	s=2
+
+    if s!=0:
+        for i in range(0,len(x)):
+            if x[i]=='.':
+                k=i
+                break
+            a.append(x[i:i+1])
+        for i in range(k+1,len(x)):
+            b.append(x[i:i+1])
+        x=float(0)
+        a.reverse()
+        for i in a :
+            if i.isalpha():
+                if i=='A':
+                    x+=10*(s**j)
+                elif i=='B':
+                    x+=11*(s**j)
+                elif i=='C':
+                    x+=12*(s**j)
+                elif i=='D':
+                    x+=13*(s**j)
+                elif i=='E':
+                    x+=14*(s**j)
+                elif i=='f':
+                    x+=15*(s**j)
+            else :
+                i=int(i)
+                x+=i*(s**j)
+            j+=1
+        j=-1
+        for i in b : 
+            if i.isalpha():
+                if i=='A':
+                    x+=10*(s**j)
+                elif i=='B':
+                    x+=11*(s**j)
+                elif i=='C':
+                    x+=12*(s**j)
+                elif i=='D':
+                    x+=13*(s**j)
+                elif i=='E':
+                    x+=14*(s**j)
+                elif i=='f':
+                    x+=15*(s**j)
+            else :
+                i=int(i)
+                x+=i*(s**j)
+            j-=1    
+    i=j=0
+    a=[]
+    if etype==1 :
+        e=10
+    elif etype==2 :
+	    e=16
+    elif etype==3 :
+	    e=8
+    elif etype==4 :
+    	e=2
+    x=float(x)
+    t=math.modf(x)
+    x=t[1]
+    r=t[0]
+    while x!=0 :  #create before point
+        s1=x%e
+        x//=e
+        if s1>9:
+            if s1==10:
+                a.append('A')
+            elif s1==11:
+                a.append('B')
+            elif s1==12:
+                a.append('C')
+            elif s1==13:
+                a.append('D')
+            elif s1==14:
+                a.append('E')
+            elif s1==15:
+                a.append('F')
+        else:
+            a.append(str(int(s1)))
+        j+=1
+    a.reverse()
+    a.append('.')
+    while (i<5):        #create after point
+        r=r*e
+        t=math.modf(r)
+        r=t[0]
+        i+=1
+        if t[1]>9:
+            if t[1]==10:
+                a.append('A')
+            elif t[1]==11:
+                a.append('B')
+            elif t[1]==12:
+                a.append('C')
+            elif t[1]==13:
+                a.append('D')
+            elif t[1]==14:
+                a.append('E')
+            elif t[1]==15:
+                a.append('F')
+        else:
+            a.append(str(int(t[1])))
+    
+    print('RESULT:')
+    for i in a:
+        print(i,end="")
+con(input('ENTER THE NUMBER IN FLOAT : '))
+
+
+'''
+OUTPUT:
+ENTER THE NUMBER IN FLOAT :1000.0
+CONVERT FROM : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 1
+CONVERT TO   : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 2
+RESULT :
+2710.00000
+
+ENTER THE NUMBER IN FLOAT :12.2
+CONVERT FROM : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 2
+CONVERT TO   : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 3
+RESULT :
+22.1000
+
+ENTER THE NUMBER IN FLOAT :1010.0
+CONVERT FROM : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 4
+CONVERT TO   : 1.DECIMAL 2.HEXA 3.OCTAL 4.BINARY : 1
+RESULT :
+10.00000
+
+'''

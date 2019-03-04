@@ -1,0 +1,24 @@
+x = input('Enter the number')
+y=input('Enter the limit ')
+x=int(x)
+y=int(y)
+print('The divisible numbers are')
+for i in range(1,y):
+    if i%x==0:
+        print(i)
+
+'''
+OUTPUT:
+Enter the number12
+Enter the limit 100
+The divisible numbers are
+12
+24
+36
+48
+60
+72
+84
+96
+
+'''

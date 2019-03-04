@@ -1,0 +1,29 @@
+def gcd(x,y):
+    if (x==0)or(y==0):
+        if x==0:
+            return y
+        else:
+            return x
+    elif x>y:
+        return gcd(x-y,y) 
+    else:
+        return gcd(y-x,x)   
+
+def lcm(x,y):
+    r=gcd(x,y)
+    return x*y//r
+
+x=int(input('Enter the first element :'))
+y=int(input('Enter the second element :'))
+print('the gcd and the lcm of the two numbers ',x,' and ',y,' is ',gcd(x,y),' and ',lcm(x,y))
+
+'''
+OUTPUT:
+Enter the first element :10
+Enter the second element :35
+the gcd and the lcm of the two numbers  10  and  35  is  5  and  70
+
+Enter the first element :4
+Enter the second element :32
+the gcd and the lcm of the two numbers  4  and  32  is  2  and  32
+'''
