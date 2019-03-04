@@ -1,0 +1,31 @@
+def arm(s,e):
+    li=[]
+    for n in range(s,e+1):
+        s=0
+        n1=n
+        while n1!=0:
+            r=n1%10
+            n1//=10
+            s+=(r*r*r)
+        if n==s:
+            li.append(n)
+    print('ARMSTRONG NUMBERS IN THE INTERVAL ARE : ')
+    for i in li:
+        print(i,end=' ')
+
+s=int(input('INTERVAL STARTS AT: '))
+e=int(input('INTERVAL ENDS AT : '))
+arm(s,e)
+
+
+'''OUTPUT:
+INTERVAL STARTS AT : 1
+INTERVAL ENDS AT : 200
+ARMSTRONG NUMBERS IN THE INTERVAL ARE
+1 153
+
+INTERVAL STARTS AT : 100
+INTERVAL ENDS AT : 500
+ARMSTRONG NUMBERS IN THE INTERVAL ARE
+153 370 371 407
+'''

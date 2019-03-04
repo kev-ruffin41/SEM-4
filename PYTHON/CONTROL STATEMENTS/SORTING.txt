@@ -1,0 +1,39 @@
+def bubble_sort(li):
+    for i in range(0,len(li)):
+        for j in range(i,len(li)):
+            if li[i]>li[j]:
+                temp=li[i]
+                li[i]=li[j]
+                li[j]=temp
+
+def display_list(li):
+    for i in li:
+        print(i,end=' ')
+    print()
+
+n=int(input('ENTER NO OF ELEMENTS:'))
+li=[]
+for i in range(0,n):
+    li.append(int(input(' ENTER THE ELEMENTS')))
+
+print('BEFORE SORTING : ')
+display_list(li)
+bubble_sort(li)
+print('AFTER SORTING: ')
+display_list(li)
+
+'''
+OUTPUT:
+ENTER NUMBER OF ELEMENTS :5
+ENTER THE ELEMENTS :
+5
+7
+6
+4
+3
+
+BEFORE SORTING :
+5 7 6 4 3
+AFTER SORTING :
+3 4 5 6 7 
+'''

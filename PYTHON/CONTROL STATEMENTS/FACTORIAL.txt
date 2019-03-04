@@ -1,0 +1,23 @@
+def fact(n):
+    if n==1:
+            return 1
+    else:
+        return int(n*fact(n-1))
+
+while True:
+    num=int(input('ENTER THE NUMBER : '))
+    print(fact(num))
+    i=int(input('if you want to exit loop enter 0: '))
+    if i==0:
+        break
+
+'''
+OUTPUT:
+ENTER THE NUMBER : 4
+24
+if you want to exit loop enter 0: 1
+
+ENTER THE NUMBER : 6
+720
+if you want to exit loop enter 0:0
+'''

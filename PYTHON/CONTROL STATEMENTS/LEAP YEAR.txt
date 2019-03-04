@@ -1,0 +1,20 @@
+while True:
+    y=int(input('ENTER YEAR TO CHECK'))
+    if y%1000!=0 and y%4==0:
+        print('LEAP YEAR')
+    else
+	print("NOT A LEAP YEAR")
+    i=int(input('Enter 0 to end the loop:'))
+    if i==0:
+        break
+
+'''
+OUTPUT:
+ENTER YEAR TO CHECK:2000
+NOT A LEAP YEAR
+Enter 0 to end the loop:1
+
+ENTER YEAR TO CHECK:2004
+LEAP YEAR
+Enter 0 to end the loop:0
+'''

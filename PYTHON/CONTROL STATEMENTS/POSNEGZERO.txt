@@ -1,0 +1,29 @@
+while True:
+    num=int(input("ENTER A NUMBER : "))
+    if num>0:
+            print("POSITIVE NUMBER")
+    elif num==0:
+            print("ZERO")
+    else:
+            print("NEGATIVE NUMBER")
+    p=int(input('If you want to end loop enter 0:'))
+    if p==0:
+        break
+
+
+'''
+OUTPUT:
+ENTER A NUMBER : 14
+POSITIVE NUMBER
+If you want to end loop enter 0:1
+
+
+ENTER A NUMBER : -8
+NEGATIVE NUMBER
+If you want to end loop enter 0:1
+
+ENTER A NUMBER : 0
+ZERO
+If you want to end loop enter 0:0
+
+'''

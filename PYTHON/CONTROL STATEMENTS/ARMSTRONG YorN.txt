@@ -1,0 +1,23 @@
+def arm(n):
+    s=0
+    n1=n
+    while n1!=0:
+        r=n1%10
+        n1//=10
+        s+=(r*r*r)
+    if n==s:
+        print('ARMSTRONG NUMBER')
+    else:
+        print('NOT AN ARMSTRONG NUMBER')        
+
+n=int(input('ENTER NUMBER TO BE CHECKED : '))
+arm(n)
+
+'''
+OUTPUT:
+ENTER NUMBER TO BE CHECKED : 135
+NOT AN ARMSTRONG NUMBER
+
+ENTER NUMBER TO BE CHECKED: 153
+ARMSTRONG NUMBER
+'''

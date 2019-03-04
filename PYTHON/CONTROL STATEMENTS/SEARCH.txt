@@ -1,0 +1,26 @@
+def lSearch(li,n):
+    for i in range(0,len(li)):
+        if n==li[i]:
+            print('ELEMENT FOUND AT LOCATION '+str(i+1))
+            return
+    print('ELEMENT NOT FOUND ')
+        
+
+n=int(input('ENTER NO OF ELEMENTS :'))
+li=[]
+for i in range(0,n):
+    li.append(int(input(' ENTER THE ELEMENTS :')))
+m=int(input('ENTER ELEMENT TO FIND - '))
+lSearch(li,m)
+
+'''
+OUTPUT:
+ENTER NO OF ELEMENTS :4
+ENTER THE ELEMENTS
+22
+32
+44
+16
+
+ENTER ELEMENT TO FIND - 44
+ELEMENT FOUND AT LOCATION -3

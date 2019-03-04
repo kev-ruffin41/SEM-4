@@ -1,0 +1,14 @@
+val=1
+sum=0
+n=int(input('ENTER LAST NUMBER: '))
+while val<=n:
+        sum=sum+val
+        val=val+1
+print("SUM=",sum)
+
+
+'''
+OUTPUT:
+ENTER LAST NUMBER : 5
+SUM=15
+'''

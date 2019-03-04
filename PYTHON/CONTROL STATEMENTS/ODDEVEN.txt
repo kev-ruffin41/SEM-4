@@ -1,0 +1,25 @@
+while True:
+    y=int(input('ENTER NUMBER TO CHECK:'))
+    if y%2==0:
+        print('EVEN NUMBER')
+    else:
+        print('ODD NUMBER')
+    i=int(input('Enter 0 to end the loop:'))
+    if i==0:
+        break
+
+'''OUTPUT:
+ENTER NUMBER TO CHECK:2
+EVEN NUMBER.
+Enter 0 to end the loop:1
+
+
+ENTER NUMBER TO CHECK:5
+ODD NUMBER.
+Enter 0 to end the loop:1
+
+ENTER NUMBER TO CHECK:8
+EVEN NUMBER.
+Enter 0 to end the loop:1
+
+'''
